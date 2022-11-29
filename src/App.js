@@ -1,23 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from "./components/Header/Header";
+import styles from './App.module.scss';
+import Content from "./components/Content/Content";
+import { useState } from 'react';
+import Payment from "./components/Content/components/Payment/Payment";
 
 function App() {
+
+const [showPayment, setShowPayment] = useState(false);
+const [numberOfBeers, setNumberOfBeers] = useState({});
+
+console.log("numberOfBeers", numberOfBeers);
+
+function showPaymentPage() {
+  setShowPayment(!showPayment);
+}
+
+function addBeer(id) {
+  setNumberOfBeers((beers) => {
+    return {
+      ...beers,
+      [id] : beers[id] ? beers[id] + 1 : 1,
+    }
+  })
+}
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={`d-flex flex-column ${styles.appContainer}`}>
+        <Header show={showPaymentPage} />
+        {
+          showPayment ? (
+            <Payment />
+          ) : (
+            <Content add={addBeer} count={numberOfBeers} />
+          )
+        }
     </div>
   );
 }
