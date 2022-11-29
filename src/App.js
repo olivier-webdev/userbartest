@@ -9,7 +9,7 @@ function App() {
 const [showPayment, setShowPayment] = useState(false);
 const [numberOfBeers, setNumberOfBeers] = useState({});
 
-console.log("numberOfBeers", numberOfBeers);
+console.log("numberOfBeers 2", numberOfBeers);
 
 function showPaymentPage() {
   setShowPayment(!showPayment);
