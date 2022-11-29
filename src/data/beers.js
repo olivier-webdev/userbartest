@@ -1,7 +1,7 @@
 export const dataBeers = [
   {
     id: 1,
-    name: "Paix-",
+    name: "Paix-Dieu",
     price: 7,
     image: "assets/images/paix_dieu.png",
     description:
