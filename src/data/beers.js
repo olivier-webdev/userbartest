@@ -9,7 +9,7 @@ export const dataBeers = [
   },
   {
     id: 2,
-    name: "Triple Karmeliet",
+    name: "Triple Karmeliet 3K",
     price: 6.5,
     image: "assets/images/tripleK.jpg",
     description:
