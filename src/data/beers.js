@@ -17,7 +17,7 @@ export const dataBeers = [
   },
   {
     id: 3,
-    name: "Queue de charrue",
+    name: "Queue de charrue http test",
     price: 5.5,
     image: "assets/images/queue_de_charrue.png",
     description:
